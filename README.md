@@ -1,4 +1,4 @@
-# Asymmetric Encryption Lab — RSA Encryption using OpenSSL
+# Asymmetric Encryption Lab - RSA Encryption using OpenSSL
 
 ## Overview
 This lab demonstrates asymmetric encryption using the RSA algorithm via OpenSSL on Kali Linux. Asymmetric encryption uses a key pair — a public key for encryption and a private key for decryption.
@@ -29,7 +29,7 @@ A 2048-bit RSA private key was generated:
 openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
 cat private.pem
 ```
-![Private Key](private_key.png)
+![Private Key](Private%20key%201.png)
 
 ---
 
@@ -39,7 +39,7 @@ The public key was extracted from the private key:
 openssl rsa -in private.pem -pubout -out public.pem
 cat public.pem
 ```
-![Public Key](public_key.png)
+![Public Key](public%20key.png)
 
 ---
 
@@ -48,7 +48,7 @@ The plaintext file was encrypted using the public key:
 ```bash
 openssl pkeyutl -encrypt -inkey public.pem -pubin -in mygoal.txt -out mygoal_rsa.enc
 ```
-![Encrypted File](encrypted_file.png)
+![Encrypted File](File%20Encrypted%20using%20the%20Public%20Key.png)
 
 ---
 
@@ -58,7 +58,7 @@ The encrypted file was decrypted using the private key:
 openssl pkeyutl -decrypt -inkey private.pem -in mygoal_rsa.enc -out mygoal_rsa_decrypted.txt
 cat mygoal_rsa_decrypted.txt
 ```
-![Decrypted File](decrypted_file.png)
+![Decrypted File](File%20Decrypted%20Using%20the%20Public%20Key.png)
 
 ---
 
@@ -79,5 +79,5 @@ cat mygoal_rsa_decrypted.txt
 ---
 
 ## Author
-**Temitope Alausa**
+**Temitope  Alausa**
 GitHub: [TemmyNetGuard](https://github.com/TemmyNetGuard)
